@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./createNewPost.css">
+    <link rel="stylesheet" href="../global.css">
+    <script src="../global.js"></script>
+
+</head>
+<body>
+<h1> Heeyy</h1>
+
+<div id="new-post-card">
+    <h1>Creating new post</h1>
+    <div id="inner-new-post-card">
+
+        <div class="text-wrapper">
+            <div class="image-wrapper">
+                <label>Image-URL: </label>
+                <input id="image-link">
+            </div>
+            <div class="hashtag-input">
+                <label>Chose or create new Hashtags!</label>
+                <select id="drop-down-hashtags"></select>
+            </div>
+            <div class="textarea-input-wrapper">
+                <textarea id="textarea-input"></textarea>
+            </div>
+            <div id="buttons">
+                <a href="./allPosts.html"><button id="button-save-post">Save new post</button></a>
+                <a href="./allPosts.html"><button id="cancel-button">Cancel</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../lib/HTMLEscape.js"></script>
+<script src="./createNewPost.js"></script>
+
+</body>
+</html>

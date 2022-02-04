@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../global.css">
+    <script src="../global.js"></script>
+
+
+
+</head>
+<body>
+
+<div id="outer-div">
+
+    <p>All availible users</p>
+    <a href="index.html"><button id="add-new-candidate" onclick="addNewUser()">Add new user➕</button></a>
+
+    <table id="user-table">
+        <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody id="user-table-tbody">
+        <tr>
+            <td>
+                <input class="input-username" placeholder="Username" id="new-user-username">
+            </td>
+            <td>
+                <textarea class="textarea-description" placeholder="Description" id="new-user-description"></textarea>
+            </td>
+            <td>
+                <a href="index.html"><button id="add-new-user" onclick="addNewUser()">Add new candidate➕</button></a>
+            </td>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="../lib/HTMLEscape.js"></script>
+<script src="./userList.js"></script>
+<script src="../users/addNewUser.js"></script>
+</body>
+</html>
