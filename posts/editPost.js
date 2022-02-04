@@ -25,7 +25,6 @@ fetch(localURL + "/hashtags")
     });
 
 function optionsHashtags(hashtag) {
-
     const hashtagOptions = document.createElement("option");
 
     hashtagOptions.id = hashtag.id;
@@ -36,16 +35,13 @@ function optionsHashtags(hashtag) {
 }
 
 function editPostInformation() {
-
     const chosenHashtag = currentHashtag.filter(hashtag => hashtag.tag === hashtagSelect.value);
-
 
     const postInformationToUpdate = {
         postImage: document.getElementById(`edit-image-link`).value,
         text: document.getElementById(`edit-textarea-input`).value,
         hashtag: chosenHashtag[0]
     };
-
     console.log(postInformationToUpdate);
 
     fetch(localURL + "/posts/" + postId, {

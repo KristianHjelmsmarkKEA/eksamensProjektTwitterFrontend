@@ -12,18 +12,66 @@
 }
 
 .inner-post-div {
-    padding-bottom: 25px;
+    padding-bottom: 50px;
+    border: 3px solid #4c58ed;
+    border-radius: 20px;
+    margin: 5px;
 }
 
+#current-user {
+    border: 3px solid #4c58ed;
+    border-radius: 20px;
+}
+#current-user-info {
+    margin-left: 10px;
+}
+
+#create-new-user {
+    margin-left: 15px;
+}
+#add-hashtag-label {
+    margin-left: 10px;
+}
+#hashtag-search {
+    position: relative;
+    width: 270px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: medium;
+    border-radius: 10px;
+}
 
 .image-wrapper img {
-    width: 90px;
-    height: 90px;
-    padding: 5px;
+    width: 90%;
+    height: auto;
+    padding: 10px;
     border-radius: 20px;
 }
 
 #current-user {
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+#post-feed {
+    margin-top: 25px;
+}
+
+.a-post-username{
+    margin-left: 10px;
+}
+
+#post-feed-text {
+    margin-left: 10px;
+}
+
+#post-feed-hashtag {
+    margin-left: 10px;
+}
+
+#button-to-index {
+    margin-left: 10px;
+}
+#button-on-post-feed {
+    margin-left: 10px;
 }

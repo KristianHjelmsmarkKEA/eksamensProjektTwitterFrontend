@@ -1,6 +1,5 @@
-.image-wrapper img {
-    width: 90px;
-    height: 90px;
-    padding: 5px;
-    border-radius: 20px;
+body {
+    background-color: dodgerblue;
+    font-family: Clashgrotesk,Verdana,sans-serif;
+    line-height: 1.5rem;
 }

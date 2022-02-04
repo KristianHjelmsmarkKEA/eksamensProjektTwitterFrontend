@@ -46,9 +46,9 @@ function updateUserInfo(user) {
 
     userTableRowToUpdate.innerHTML = `
     <td>
-        <input id="update-user-name-${user.id}" value="${user.username}" placeholder="${user.username}">
+        <input class="user-list-name" id="update-user-name-${user.id}" value="${user.username}" placeholder="${user.username}">
     </td>
-    <td>
+    <td id="textarea-description-td">
         <textarea class="update-user-description" id="update-user-description-${user.id}">${user.description}</textarea>
     </td>
     <td>

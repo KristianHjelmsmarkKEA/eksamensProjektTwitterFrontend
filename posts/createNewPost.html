@@ -6,23 +6,21 @@
     <link rel="stylesheet" href="./createNewPost.css">
     <link rel="stylesheet" href="../global.css">
     <script src="../global.js"></script>
-
 </head>
 <body>
-<h1> Heeyy</h1>
 
 <div id="new-post-card">
-    <h1>Creating new post</h1>
+    <h1 id="new-post-label">Creating new post</h1> <br>
     <div id="inner-new-post-card">
 
-        <div class="text-wrapper">
-            <div class="image-wrapper">
-                <label>Image-URL: </label>
-                <input id="image-link">
-            </div>
+        <div class="new-post-wrapper">
             <div class="hashtag-input">
-                <label>Chose or create new Hashtags!</label>
+                <label id="label-for-hashtag">Chose Hashtag!</label>
                 <select id="drop-down-hashtags"></select>
+            </div>
+            <div class="image-wrapper">
+                <label id="label-for-url">Image-URL: </label>
+                <input id="image-link">
             </div>
             <div class="textarea-input-wrapper">
                 <textarea id="textarea-input"></textarea>

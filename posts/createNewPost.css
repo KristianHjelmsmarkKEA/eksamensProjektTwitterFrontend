@@ -9,16 +9,34 @@
     margin: 3% auto;
     overflow-x: hidden;
     overflow-y: auto;
+
+}
+#new-post-label {
+    margin-left: 170px;
 }
 
-.inner-new-post-card {
-    padding-bottom: 25px;
+#textarea-input {
+    width: 90%;
+    height: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+
+#hashtag-input {
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+#label-for-hashtag{
+    margin-left: 230px;
+}
+#label-for-url {
+    margin-left: 200px;
 }
 
 
-.image-wrapper img {
-    width: 90px;
-    height: 90px;
-    padding: 5px;
-    border-radius: 20px;
+
+#button-save-post {
+    margin-left: 260px;
 }

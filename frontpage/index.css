@@ -19,6 +19,28 @@ table, tr, td {
     height: 100%;
     flex-grow: 1;
 }
-p {
-    text-align: center;
+
+#new-user-username {
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+#textarea-description-td {
+    position: relative;
+}
+#textarea-description, #update-user-description, #new-user-description, #textarea-description-td {
+    width: 92%;
+    height: 50px;
+    margin: 3%;
+}
+
+button {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+

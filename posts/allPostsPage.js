@@ -5,14 +5,11 @@ const postGalleryDiv = document.getElementById("post-feed");
 let currentHashtags;
 let filterdPosts;
 
-
-
 fetch(localURL + "/hashtags")
     .then(respones => respones.json())
     .then(hashtags => {
         currentHashtags = hashtags;
         console.log(hashtags);
-
 
                 fetch(localURL + "/users/" + userId)
                     .then(response => response.json())
@@ -20,33 +17,32 @@ fetch(localURL + "/hashtags")
                         console.log(user);
                         createNewPostButton(user)
 
-
                         fetch(localURL + "/posts")
                             .then(response => response.json())
                             .then(posts => {
                                 console.log(posts);
                                 filterdPosts = posts;
-                                document.getElementById("hashtag-search").addEventListener("input", handleSearchName);
+                                document.getElementById("hashtag-search").addEventListener("input", handleHashtagSearch);
                                 posts.map(createPostCard);
                             });
                     });
 });
-console.log(filterdPosts)
+
 
 
 function createNewPostButton(user) {
     const currentUserDiv = document.getElementById("current-user")
     currentUserDiv.innerHTML = `
-    <a id="current-user">Current User: ${user.username}</a>
+    <a id="current-user-info">Current User: ${user.username}</a>
+    <br><br>
+    <label id="add-hashtag-label">Add new Hashtag</label> <input value="#" id="add-new-hashtag"> <a href="allPosts.html"><button onclick="addHashtag()">Save hashtag</button></a>
     <a id="create-new-post-on-user" href="createNewPost.html?userId=${user.id}"><button id="create-new-user">Create new Post</button></a>
-    <br>
-    <label>Add new Hashtag</label> <input value="#" id="add-new-hashtag"> <a href="allPosts.html"> <button onclick="addHashtag()">Save hashtag</button> </a>
-    <br>
+    <a href="../frontpage/index.html" id="button-to-index"><button>Switch User</button></a>
+    <br><br>
     <input id="hashtag-search" placeholder="Search Hashtag">
     `;
 
 }
-
 
 function createPostCard(post) {
     const cardElement = document.createElement("div");
@@ -55,18 +51,17 @@ function createPostCard(post) {
     cardElement.innerHTML = `
     <a href="editPost.html?postId=${post.id}">
         <a class="a-post-username">${escapeHTML(post.user.username)}</a>
-        <a class="a-test-post-date">${new Date(post.createdDate).toLocaleString()}</a> 
-                
-        <br>
+        <a class="a-test-post-date">Posted: ${new Date(post.createdDate).toLocaleString()}</a> 
+        
     </a>
         <div class="text-wrapper">
-                <p>${post.text} </p>
-                <a href="">${post.hashtag.tag}</a>
+                <p id="post-feed-text">${post.text} </p>
+                <a id="post-feed-hashtag">${post.hashtag.tag}</a>
                 <div class="image-wrapper">
                 <img src="${post.postImage}">
             </div>
-            <a href="editPost.html?postId=${post.id}"><button type="button" onclick="editPost(${post.id})">Edit post</button> </a>
-        <a href="editPost.html"><button onclick="deletePost(${post.id})">Delete post</button></a>
+            <a href="editPost.html?postId=${post.id}" id="button-on-post-feed"><button type="button" onclick="editPost(${post.id})">Edit post</button></a>
+        <a href="allPosts.html?postId=${post.id}"><button onclick="deletePost(${post.id})">Delete post</button></a>
 
     </div>
     
@@ -114,7 +109,7 @@ function addHashtag() {
 
 }
 
-function handleSearchName(event) {
+function handleHashtagSearch(event) {
     postGalleryDiv.innerHTML = "";
     filterdPosts.filter(post => post.hashtag.tag.toLowerCase().includes(event.target.value.toLowerCase())).map(createPostCard);
 }

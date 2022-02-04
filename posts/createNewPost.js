@@ -5,11 +5,6 @@ const hashtagSelect = document.getElementById(`drop-down-hashtags`);
 let currentUser;
 let currentHashtag;
 
-
-const newPostDiv = document.getElementById("new-post-div");
-
-
-
 fetch(localURL + "/hashtags")
     .then(response => response.json())
     .then(hashtags => {
@@ -25,7 +20,6 @@ fetch(localURL + "/hashtags")
             });
     });
 document.getElementById("button-save-post").addEventListener("click", createNewPost);
-
 
 function optionsHashtags(hashtag) {
 
